@@ -1,0 +1,23 @@
+language: swift
+osx_image: xcode11.2.1
+xcode_project: SwiftyChevron.xcproject
+xcode_scheme: SwiftyChevron
+xcode_sdk: iphonesimulator13.2.2
+env:
+  global:
+  - FRAMEWORK_NAME=SwiftyChevron
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+brefore_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: JYwUgooMT4VmdUYUo0FNOu4FaEUVr+9j+XO2EdAOez/ffSVyag+ynfj+/QkQsgCSlQU+ZCFRTDRA+IJmV5QJavQBn2wTbuPC1G2ClwwTwruL6znPTCHbq0HaNT+l9TyZ9dHkqb24Ld3raRpJk1fAMCWXJGI0YLk1ctC/hOmGvlW2ABKIHcTZ6SfMc2wg35Gzh5QIr+iFCa4a90ZGiit0G1XrOTEX0qQ4dsKnYWd9HGysUvPBGsT67MzeSZeLikcgsuuKXmRZ1+1eWmBtZBQEVXClRpsPrN30kKfwkeIAQ72JgMqj6pRK0X87QXyiGhgftNKQoPPHGM8QlOXg9o6N9NLR5YkcMU0nyLZN4nLxKWz2br/50qxrSgIrWSsciqvmD00Un0VsqVW2P/Hk/f75YYwB/LaSdX5cs7rwfOt/drPifZrCIwZRGHx+vTnVMvGNwUJSdSfFs6hJec0rcwXr4k94ZK5YiGy7TT5RCqJHzog4iqqU2cBD54SlHujFx5AKng/Wbc7Es4THAyNtjE/XgXSilCwW19IkI/udz763b9Q4w/fLC4ANYA7qwdAZCvzrnpAgQ8IId2xUBQk2Ji7UcOpobyUFTAy2DC1iGdHHvvM3Z5ni2xzVlo4KnVgTdkUcH28HEqs+rQAcIPIRJaHjaOLKBe+HRw6Pa6CPQ8Jh+sw=
+  file: SwiftyChevron.framework.zip
+  skip_cleanup: true
+  on:
+    repo: iMac0de/SwiftyChevron
+    tags: true
