@@ -1,8 +1,8 @@
 language: swift
-osx_image: xcode11.2.1
+osx_image: xcode11.1
 xcode_project: SwiftyChevron.xcproject
 xcode_scheme: SwiftyChevron
-xcode_sdk: iphonesimulator13.2.2
+xcode_sdk: iphonesimulator13.1
 env:
   global:
   - FRAMEWORK_NAME=SwiftyChevron
