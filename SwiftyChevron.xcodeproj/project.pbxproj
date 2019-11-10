@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE1FCA62378537C00D5323B /* SwiftyChevronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1FCA52378537C00D5323B /* SwiftyChevronTests.swift */; };
+		3FE1FCA82378537C00D5323B /* SwiftyChevron.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55ECE9B232A3CF500218303 /* SwiftyChevron.framework */; };
 		D55ECEA0232A3CF500218303 /* SwiftyChevron.h in Headers */ = {isa = PBXBuildFile; fileRef = D55ECE9E232A3CF500218303 /* SwiftyChevron.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D55ECEA7232A3D3800218303 /* Chevron.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55ECEA6232A3D3800218303 /* Chevron.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3FE1FCA92378537C00D5323B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55ECE92232A3CF500218303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55ECE9A232A3CF500218303;
+			remoteInfo = SwiftyChevron;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3FE1FCA32378537C00D5323B /* SwiftyChevronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyChevronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE1FCA52378537C00D5323B /* SwiftyChevronTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyChevronTests.swift; sourceTree = "<group>"; };
+		3FE1FCA72378537C00D5323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55ECE9B232A3CF500218303 /* SwiftyChevron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyChevron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55ECE9E232A3CF500218303 /* SwiftyChevron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyChevron.h; sourceTree = "<group>"; };
 		D55ECE9F232A3CF500218303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +34,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3FE1FCA02378537C00D5323B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1FCA82378537C00D5323B /* SwiftyChevron.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D55ECE98232A3CF500218303 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE1FCA42378537C00D5323B /* SwiftyChevronTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1FCA52378537C00D5323B /* SwiftyChevronTests.swift */,
+				3FE1FCA72378537C00D5323B /* Info.plist */,
+			);
+			path = SwiftyChevronTests;
+			sourceTree = "<group>";
+		};
 		D55ECE91232A3CF500218303 = {
 			isa = PBXGroup;
 			children = (
 				D55ECE9D232A3CF500218303 /* SwiftyChevron */,
+				3FE1FCA42378537C00D5323B /* SwiftyChevronTests */,
 				D55ECE9C232A3CF500218303 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D55ECE9B232A3CF500218303 /* SwiftyChevron.framework */,
+				3FE1FCA32378537C00D5323B /* SwiftyChevronTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3FE1FCA22378537C00D5323B /* SwiftyChevronTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE1FCAD2378537C00D5323B /* Build configuration list for PBXNativeTarget "SwiftyChevronTests" */;
+			buildPhases = (
+				3FE1FC9F2378537C00D5323B /* Sources */,
+				3FE1FCA02378537C00D5323B /* Frameworks */,
+				3FE1FCA12378537C00D5323B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FE1FCAA2378537C00D5323B /* PBXTargetDependency */,
+			);
+			name = SwiftyChevronTests;
+			productName = SwiftyChevronTests;
+			productReference = 3FE1FCA32378537C00D5323B /* SwiftyChevronTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D55ECE9A232A3CF500218303 /* SwiftyChevron */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D55ECEA3232A3CF500218303 /* Build configuration list for PBXNativeTarget "SwiftyChevron" */;
@@ -93,9 +145,13 @@
 		D55ECE92232A3CF500218303 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Jérémy Peltier";
 				TargetAttributes = {
+					3FE1FCA22378537C00D5323B = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					D55ECE9A232A3CF500218303 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
@@ -115,11 +171,19 @@
 			projectRoot = "";
 			targets = (
 				D55ECE9A232A3CF500218303 /* SwiftyChevron */,
+				3FE1FCA22378537C00D5323B /* SwiftyChevronTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3FE1FCA12378537C00D5323B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D55ECE99232A3CF500218303 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +194,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3FE1FC9F2378537C00D5323B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FE1FCA62378537C00D5323B /* SwiftyChevronTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D55ECE97232A3CF500218303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,7 +212,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3FE1FCAA2378537C00D5323B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55ECE9A232A3CF500218303 /* SwiftyChevron */;
+			targetProxy = 3FE1FCA92378537C00D5323B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3FE1FCAB2378537C00D5323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37RJHPCLXL;
+				INFOPLIST_FILE = SwiftyChevronTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremy-peltier.SwiftyChevronTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FE1FCAC2378537C00D5323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37RJHPCLXL;
+				INFOPLIST_FILE = SwiftyChevronTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremy-peltier.SwiftyChevronTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D55ECEA1232A3CF500218303 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3FE1FCAD2378537C00D5323B /* Build configuration list for PBXNativeTarget "SwiftyChevronTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE1FCAB2378537C00D5323B /* Debug */,
+				3FE1FCAC2378537C00D5323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D55ECE95232A3CF500218303 /* Build configuration list for PBXProject "SwiftyChevron" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
