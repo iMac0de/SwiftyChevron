@@ -1,11 +1,11 @@
 language: swift
 osx_image: xcode11.1
-xcode_project: SwiftyChevron.xcodeproj
-xcode_scheme: SwiftyChevron
-xcode_sdk: iphonesimulator13.1
 env:
   global:
   - FRAMEWORK_NAME=SwiftyChevron
+script:
+- set -o pipefail
+- xcodebuild -project SwiftyChevron.xcodeproj -scheme SwiftyChevron -sdk iphonesimulator13.1 build | xcpretty
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
